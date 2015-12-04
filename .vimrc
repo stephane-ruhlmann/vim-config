@@ -21,9 +21,6 @@ Plugin 'othree/html5.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'elzr/vim-json'
 
-" Auto-completion
-" Plugin 'Valloric/YouCompleteMe'
-
 " Syntax color
 Plugin 'altercation/vim-colors-solarized'
 
@@ -62,7 +59,7 @@ set mouse=a
 " Tommorow Options
 set background=dark
 let g:solarized_termtrans = 1
-colorscheme tommorow
+colorscheme Tomorrow-Night
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -70,7 +67,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
-" NerdTree open at start
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Abbrevs
+iabbrev consl console.log(
+
 map <C-n> :NERDTreeToggle<CR>
+autocmd VimEnter * CtrlP
